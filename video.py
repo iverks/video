@@ -122,13 +122,13 @@ class WorkOverview(Scene):
         lens = VGroup(lens_l, lens_r)
 
         sample_holder = Rectangle(width=2, height=0.1, **sample_2d_kwargs)
-        sample_holder.shift(DOWN * 2)
+        sample_holder.shift(DOWN * 2.5)
 
         self.add(electron_gun_top, electron_gun_bottom, lens, sample_holder)
         self.wait(1)
 
         # * The electron microscope consists of three main parts
-        # 1. we have the electron gun
+        # The electron gun, the lens system and the sample and sample holder
         electron_gun_rect = RoundedRectangle(
             height=3,
             width=4,
@@ -139,6 +139,53 @@ class WorkOverview(Scene):
         electron_gun_label = Text(
             "Electron gun", font_size=SMALL_FONT_SIZE, color=C_E_GUN
         ).next_to(electron_gun_rect)
+
+        lens_sys_rect = RoundedRectangle(
+            height=2.0,
+            width=4,
+            corner_radius=0.5,
+            stroke_color=C_LENS,
+        )
+        lens_sys_label = Text(
+            "Lens system", font_size=SMALL_FONT_SIZE, color=C_LENS
+        ).next_to(lens_sys_rect)
+
+        sample_rect = RoundedRectangle(
+            height=1.5,
+            width=4,
+            corner_radius=0.5,
+            stroke_color=C_SAMPLE,
+        )
+        sample_rect.shift(DOWN * 2.5)
+        sample_label = Text(
+            "Sample", font_size=SMALL_FONT_SIZE, color=C_SAMPLE
+        ).next_to(sample_rect)
+
+        self.play(
+            FadeIn(
+                electron_gun_rect,
+                electron_gun_label,
+                lens_sys_rect,
+                lens_sys_label,
+                sample_rect,
+                sample_label,
+            )
+        )
+
+        self.wait(2)
+
+        self.play(
+            FadeOut(
+                electron_gun_rect,
+                electron_gun_label,
+                lens_sys_rect,
+                lens_sys_label,
+                sample_rect,
+                sample_label,
+            )
+        )
+
+        # 1. we have the electron gun
         self.play(FadeIn(electron_gun_rect, electron_gun_label))
 
         self.wait(2)
@@ -157,7 +204,7 @@ class WorkOverview(Scene):
                 stroke_opacity=[1, 0.2, 0],
             )
             electron_line = Line(
-                UP * 2, DOWN * 2 + LEFT * 0.1 + RIGHT * 0.1 * i
+                UP * 2, DOWN * 2.5 + LEFT * 0.1 + RIGHT * 0.1 * i
             )  # Invisible
 
             self.add(electron, electron_path)
@@ -169,15 +216,7 @@ class WorkOverview(Scene):
         self.wait(2)
 
         # 2. we have the lens system
-        lens_sys_rect = RoundedRectangle(
-            height=3,
-            width=4,
-            corner_radius=0.5,
-            stroke_color=C_LENS,
-        )
-        lens_sys_label = Text(
-            "Lens system", font_size=SMALL_FONT_SIZE, color=C_LENS
-        ).next_to(lens_sys_rect)
+
         self.play(FadeIn(lens_sys_rect, lens_sys_label))
 
         self.wait(2)
@@ -207,23 +246,14 @@ class WorkOverview(Scene):
             stroke_opacity=[1, 0.2, 0],
         )
         electron_line = Line(UP * 2, LEFT * 0.5)  # Invisible
-        electron_line.add_line_to(DOWN * 2)
+        electron_line.add_line_to(DOWN * 2.5)
 
         self.add(electron, electron_path)
         self.play(AnimationGroup(MoveAlongPath(electron, electron_line)))
         self.wait(2)
 
         # 3. finally we have the sample
-        sample_rect = RoundedRectangle(
-            height=3,
-            width=4,
-            corner_radius=0.5,
-            stroke_color=C_SAMPLE,
-        )
-        sample_rect.shift(DOWN * 2)
-        sample_label = Text(
-            "Sample", font_size=SMALL_FONT_SIZE, color=C_SAMPLE
-        ).next_to(sample_rect)
+
         self.play(FadeIn(sample_rect, sample_label))
 
         self.wait(2)
@@ -231,3 +261,5 @@ class WorkOverview(Scene):
         self.play(FadeOut(sample_rect, sample_label))
 
         self.wait(1)
+
+        # Maybe move everything to the left and do a zoomed view on the right with details?
