@@ -1,18 +1,22 @@
+
 What would you do if you wanted to look at something really small?
-Something really really small - 
-And you wanted to look at it in great detail.
+Maybe you'd pull out your trusty magifying glass.
 
-You would probably use one of these - a microscope
-But what if you wanted to go even smaller than what the photons could discern?
+But what if the thing was too small, or maybe you wanted to look at it with even finer detail.
 
-Well, then - i say - you should use an electron microscope
-Hold up, what is that
+Well, then - i propose - you should use an electron microscope
 
-An electron microscope is simply a microscope that uses electrons (fake end of video)
 
-In its simplest form it consists of three main parts, the electron gun, the lens system and the sample holder - which is the thing we want to look at.
 
-The electron gun shoots electrons in the direction of the sample.
+An electron microscope is a microscope that uses electrons instead of light
+In its simplest form it consists of three main parts, the electron gun, the lens system and the sample - the thing you want to look at.
 
-The lens system focuses the electrons to the spot where we want them. It can also be used to scan the electron beam over the sample.
+The electron gun shoots electrons at the sample.
 
+The lenses focus the electrons to the spot where we want them. They are also used to scan the electron beam over the sample.
+
+When the electrons hit the sample they are either absorbed or reflected. While scanning over the sample, the pixel intensity is determined by the amount of electrons reflected.
+
+
+
+With this simple principle, electron microscopes can take extremely high quality images of extremely small things

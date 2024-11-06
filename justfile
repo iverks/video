@@ -1,9 +1,14 @@
 
-overview:
-    manim -ql video.py WorkOverview
+each:
+    manim -ql -p video.py EachPart
 
-intro:
-    manim -ql video.py Intro
+overview:
+    manim -ql -p video.py Overview
 
 all:
-    manim -a video.py
+    manim -aqh video.py
+
+alias t := transcode
+
+transcode:
+    ffmpeg -i media/videos/video/1080p60/EachPart.mp4 -c:v dnxhd -profile:v dnxhr_hq -pix_fmt yuv422p -c:a copy videos/EachPart.mov

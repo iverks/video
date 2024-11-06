@@ -59,3 +59,12 @@ Scene 1:
 ### Kilder
 
 - SEM-illustrasjon adaptert fra: https://www.britannica.com/technology/scanning-electron-microscope
+- Musikk fra: AShamaluevMusic
+- Musebilde: https://unsplash.com/photos/brown-rodent-on-brown-stem--dtKoaHpi9M
+- Fluebilde: https://unsplash.com/photos/green-and-brown-housefly-adrNlUcUjWc
+- Forvirra: https://unsplash.com/photos/a-man-with-a-backpack-talking-on-a-cell-phone-tI9EOig-tm8
+- Se i mikroskop: https://www.pexels.com/nb-no/bilde/jente-sot-skole-bord-5063450/
+- Edderkopp: https://unsplash.com/photos/barn-spider-on-cobweb-closeup-photography-x2dJcfCNO1A
+- Peanøtter: https://unsplash.com/photos/pile-of-peanuts-13lLAWadKwU
+- (Ikke brukt) Svamp: https://unsplash.com/photos/a-pair-of-yellow-gloves-holding-a-blue-piece-of-paper-2QCS_YZio8s
+- Lyn: https://unsplash.com/photos/time-lapse-photo-of-lightning-GmBT6GQEOs0
